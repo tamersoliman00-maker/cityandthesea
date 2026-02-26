@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon</title>
+
   <style>
     * {
       margin: 0;
@@ -12,26 +13,47 @@
     }
 
     body {
-      background: #000;
+      background: #0f1e17;
+      height: 100vh;
+      overflow: hidden;
       font-family: Arial, sans-serif;
     }
 
-    .container {
+    .hero {
       width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: #0f1e17;
     }
 
-    .container img {
+    /* 💻 ديسكتوب */
+    .hero img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 50%; /* تركيز على النص */
       display: block;
+    }
+
+    /* 📱 موبايل */
+    @media (max-width: 768px) {
+      .hero img {
+        object-fit: scale-down; /* واضحة بدون قص */
+        width: 100%;
+        height: 100%;
+        transform: scale(1.05); /* تكبير خفيف */
+        object-position: center 50%;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <img src="1.jpg" alt="Image 1">
- 
-</a>
+  <div class="hero">
+    <img src="1.jpg" alt="Coming Soon">
   </div>
 </body>
 </html>
